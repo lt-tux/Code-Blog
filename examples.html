@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Examples | Code-Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Code-<span>Blog</span></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="examples.html" class="active">Code Examples</a>
+                    <a href="contribute.html">Contribute</a>
+                    <a href="about.html">About</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">Code Examples & Snippets</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--gray);">
+                Useful code snippets and examples that I've collected throughout my coding journey. Feel free to use them in your projects!
+            </p>
+            
+            <div class="code-examples">
+                <div class="code-card">
+                    <div class="code-header">
+                        <div class="code-title">Fetch API with Error Handling</div>
+                        <div class="code-lang">JavaScript</div>
+                    </div>
+                    <pre><code class="language-javascript">
+// Async function to fetch data with error handling
+async function fetchData(url) {
+    try {
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        // Handle error appropriately
+        throw error;
+    }
+}
+
+// Usage example
+fetchData('https://api.example.com/data')
+    .then(data => console.log(data))
+    .catch(error => console.error('Failed to fetch:', error));
+                    </code></pre>
+                    <div style="padding: 15px; text-align: right; background-color: #0f172a;">
+                        <button class="btn copy-btn" style="padding: 8px 15px; font-size: 14px;">
+                            <i class="far fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="code-card">
+                    <div class="code-header">
+                        <div class="code-title">Python List Comprehension</div>
+                        <div class="code-lang">Python</div>
+                    </div>
+                    <pre><code class="language-python">
+# Traditional way to create a list of squares
+squares = []
+for x in range(10):
+    squares.append(x**2)
+
+# Using list comprehension (more Pythonic)
+squares = [x**2 for x in range(10)]
+
+# List comprehension with conditional
+even_squares = [x**2 for x in range(10) if x % 2 == 0]
+
+# Nested list comprehension
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+
+# Dictionary comprehension
+squares_dict = {x: x**2 for x in range(5)}
+# Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+                    </code></pre>
+                    <div style="padding: 15px; text-align: right; background-color: #0f172a;">
+                        <button class="btn copy-btn" style="padding: 8px 15px; font-size: 14px;">
+                            <i class="far fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="code-card">
+                    <div class="code-header">
+                        <div class="code-title">React Custom Hook</div>
+                        <div class="code-lang">React</div>
+                    </div>
+                    <pre><code class="language-javascript">
+import { useState, useEffect } from 'react';
+
+// Custom hook for fetching data
+function useFetch(url) {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const result = await response.json();
+                setData(result);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, [url]);
+
+    return { data, loading, error };
+}
+
+// Usage in a component
+function UserProfile({ userId }) {
+    const { data: user, loading, error } = useFetch(`/api/users/${userId}`);
+
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
+
+    return (
+        <div>
+            <h2>{user.name}</h2>
+            <p>Email: {user.email}</p>
+        </div>
+    );
+}
+                    </code></pre>
+                    <div style="padding: 15px; text-align: right; background-color: #0f172a;">
+                        <button class="btn copy-btn" style="padding: 8px 15px; font-size: 14px;">
+                            <i class="far fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="code-card">
+                    <div class="code-header">
+                        <div class="code-title">CSS Grid Layout</div>
+                        <div class="code-lang">CSS</div>
+                    </div>
+                    <pre><code class="language-css">
+/* Basic CSS Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Responsive grid with media queries */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Grid area template */
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+                    </code></pre>
+                    <div style="padding: 15px; text-align: right; background-color: #0f172a;">
+                        <button class="btn copy-btn" style="padding: 8px 15px; font-size: 14px;">
+                            <i class="far fa-copy"></i> Copy Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="contribute.html" class="btn btn-accent">Submit Your Code Example</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Code-<span>Blog</span></h3>
+                    <p>Useful code snippets for developers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Languages</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">React</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Node.js</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contribute</h3>
+                    <p>Have a useful code snippet? <a href="contribute.html" style="color: var(--accent);">Submit it here</a>.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Code-Blog. All code examples are free to use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

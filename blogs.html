@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Code-Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Code-<span>Blog</span></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="blogs.html" class="active">Blogs</a>
+                    <a href="examples.html">Code Examples</a>
+                    <a href="contribute.html">Contribute</a>
+                    <a href="about.html">About</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">All Blog Posts</h1>
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <button class="btn filter-btn active" data-filter="all">All</button>
+                <button class="btn filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="btn filter-btn" data-filter="python">Python</button>
+                <button class="btn filter-btn" data-filter="react">React</button>
+                <button class="btn filter-btn" data-filter="node">Node.js</button>
+            </div>
+            
+            <div class="blog-cards">
+                <!-- Blog cards will be populated here -->
+                <!-- This would be dynamically loaded in a real application -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn" id="loadMore">Load More Blogs</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Code-<span>Blog</span></h3>
+                    <p>Documenting my journey through code, one blog post at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">React</a></li>
+                        <li><a href="#">Node.js</a></li>
+                        <li><a href="#">Algorithms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ak-ake" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Code-Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute | Code-Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Code-<span>Blog</span></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="examples.html">Code Examples</a>
+                    <a href="contribute.html" class="active">Contribute</a>
+                    <a href="about.html">About</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">Contribute to Code-Blog</h1>
+            
+            <div class="contribute-info">
+                <h2>Share Your Knowledge with the Community</h2>
+                <p>Code-Blog is not just about my journey - it's about building a community where developers can learn from each other. I welcome contributions from developers of all skill levels.</p>
+                <p>You can contribute by:</p>
+                <ul style="margin: 20px 0 20px 40px; color: var(--gray);">
+                    <li>Submitting a blog post about your coding experience</li>
+                    <li>Sharing useful code snippets or examples</li>
+                    <li>Providing tutorials on specific topics</li>
+                    <li>Suggesting improvements to existing content</li>
+                    <li>Reporting bugs or issues with the website</li>
+                </ul>
+                <p>All contributions will be reviewed and credited to you.</p>
+            </div>
+            
+            <div class="contribute-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Fork the Repository</h3>
+                    <p>Visit the <a href="https://github.com/ak-ake" style="color: var(--primary); font-weight: 600;" target="_blank">GitHub repository</a> and fork it to your account.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Create Your Content</h3>
+                    <p>Write your blog post or create your code example following the contribution guidelines.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Submit a Pull Request</h3>
+                    <p>Create a pull request with a clear description of your contribution.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Review & Merge</h3>
+                    <p>I'll review your contribution and merge it if it meets the quality standards.</p>
+                </div>
+            </div>
+            
+            <div class="contribute-form">
+                <h2 style="margin-bottom: 30px;">Submit Your Contribution</h2>
+                <form id="contributeForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="github">GitHub Username</label>
+                        <input type="text" id="github" name="github" placeholder="(Optional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contribution-type">Type of Contribution *</label>
+                        <select id="contribution-type" name="contribution-type" required>
+                            <option value="">Select type</option>
+                            <option value="blog">Blog Post</option>
+                            <option value="code">Code Example</option>
+                            <option value="tutorial">Tutorial</option>
+                            <option value="improvement">Content Improvement</option>
+                            <option value="bug">Bug Report</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Title *</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description *</label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="content">Content (Code or Blog Text) *</label>
+                        <textarea id="content" name="content" rows="10" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tags">Tags (comma-separated)</label>
+                        <input type="text" id="tags" name="tags" placeholder="JavaScript, React, Tutorial">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-accent" style="width: 100%; padding: 15px; font-size: 18px;">
+                        Submit Contribution
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Code-<span>Blog</span></h3>
+                    <p>A community-driven coding blog.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contribution Guidelines</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Quality Standards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Need Help?</h3>
+                    <p>Contact me at <a href="mailto:akshay@example.com" style="color: var(--accent);">akshay@example.com</a> for contribution questions.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Code-Blog. Community contributions are welcome!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

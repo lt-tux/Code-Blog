@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Blog | My Coding Journey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Code-<span>Blog</span></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="examples.html">Code Examples</a>
+                    <a href="contribute.html">Contribute</a>
+                    <a href="about.html">About</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to My Coding Journey</h1>
+            <p>Join me as I document my path through web development, programming challenges, and creative projects. Here you'll find tutorials, code snippets, and insights from my experience as a developer.</p>
+            <div class="hero-btns">
+                <a href="blogs.html" class="btn">Read Blogs</a>
+                <a href="examples.html" class="btn btn-accent">View Code Examples</a>
+                <a href="contribute.html" class="btn btn-outline">Contribute</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" id="repositories">24</div>
+                    <div class="stat-label">GitHub Repositories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="followers">12</div>
+                    <div class="stat-label">GitHub Followers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="contributions">387</div>
+                    <div class="stat-label">Total Contributions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="projects">8</div>
+                    <div class="stat-label">Completed Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Blogs -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Recent Blog Posts</h2>
+            <div class="blog-cards">
+                <div class="blog-card" data-tags="javascript react">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> March 15, 2023</span>
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3>Mastering React Hooks: A Complete Guide</h3>
+                        <p>Learn how to effectively use React Hooks to build functional components with state and lifecycle methods.</p>
+                        <div class="blog-tags">
+                            <span class="tag react">React</span>
+                            <span class="tag js">JavaScript</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-tags="python algorithms">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> February 28, 2023</span>
+                            <span><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                        <h3>Data Structures in Python: From Beginner to Pro</h3>
+                        <p>An in-depth look at Python's built-in data structures and how to implement custom ones for your projects.</p>
+                        <div class="blog-tags">
+                            <span class="tag python">Python</span>
+                            <span class="tag">Algorithms</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-tags="node backend">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> January 10, 2023</span>
+                            <span><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <h3>Building REST APIs with Node.js and Express</h3>
+                        <p>A step-by-step tutorial on creating robust RESTful APIs using Node.js and Express framework.</p>
+                        <div class="blog-tags">
+                            <span class="tag node">Node.js</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="blogs.html" class="btn">View All Blogs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Code-<span>Blog</span></h3>
+                    <p>A personal blog documenting my coding journey, sharing knowledge, and building a community of developers.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/ak-ake" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dev"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="examples.html">Code Examples</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> akshay@example.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> India</li>
+                        <li><a href="https://github.com/ak-ake" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Code-Blog. All rights reserved. | Created with <i class="fas fa-heart" style="color: #e74c3c;"></i> by Akshay</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
